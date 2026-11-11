@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khoi Pham — Mechanical Engineer</title>
+  <meta name="description" content="Portfolio of mechanical design, personal projects and code.">
+  <link rel="stylesheet" href="assets/theme.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">KP<span>/</span>portfolio</a>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow">Mechanical Engineer</p>
+      <h1>Designing parts, mechanisms and the code that drives them.</h1>
+      <p class="lede">
+        A central record of my engineering work — from CAD and product design,
+        to things I build for fun, to software that supports both.
+      </p>
+      <div class="hero-links">
+        <a class="btn" href="#work">View work</a>
+        <a class="btn ghost" href="assets/cv.pdf">Download CV</a>
+      </div>
+    </section>
+
+    <section id="work" class="wrap">
+      <div class="section-head">
+        <h2>Work</h2>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="active" aria-pressed="true" data-filter="all">All</button>
+          <button data-filter="design">Design</button>
+          <button data-filter="personal">Personal</button>
+          <button data-filter="code">Code</button>
+        </div>
+      </div>
+
+      <!-- Projects are listed in assets/projects.js (supports nested sub-projects). -->
+      <nav class="crumbs" id="work-crumbs" aria-label="Project folders" hidden></nav>
+      <div class="folder-intro" id="work-intro" hidden></div>
+      <div class="grid" id="work-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="wrap about">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div>
+          <p>
+            I'm a mechanical engineer interested in how things are designed, made and
+            tested. This site collects professional design work, personal builds and
+            coding projects in one place.
+          </p>
+          <p>
+            Replace this paragraph with your background: degree, current role,
+            what you enjoy working on.
+          </p>
+        </div>
+        <dl class="skills">
+          <dt>CAD / CAE</dt><dd>SolidWorks, Fusion 360, ANSYS</dd>
+          <dt>Manufacturing</dt><dd>Machining, sheet metal, 3D printing</dd>
+          <dt>Code</dt><dd>Python, MATLAB, C++ (Arduino)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap contact">
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><a href="https://github.com/ThomasMyo">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap site-footer">
+    <p>© <span id="year"></span> Khoi Pham</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/projects.js"></script>
+  <script src="assets/work.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* =====================================================================
+   THEME — the one place to change the site's colours and fonts.
+   Every page loads this file before style.css, which only uses these
+   variables. Edit values here; you shouldn't need to touch style.css.
+   ===================================================================== */
+
+/* ---------- 1. Fonts ------------------------------------------------
+   To switch fonts:
+     a) pick fonts on https://fonts.google.com and copy their @import URL
+        into the line below (or delete the line to use system fonts only)
+     b) put the font names first in --font-body / --font-mono
+*/
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;     /* paragraphs, headings */
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;   /* labels, tags, nav brand */
+  --font-size: 17px;                                       /* base text size; others scale off it */
+
+  /* ---------- 2. Shape ---------- */
+  --radius: 6px;        /* cards, images */
+  --radius-sm: 4px;     /* buttons, badges */
+  --grid-size: 24px;    /* spacing of the drafting-paper background grid; 0 to hide */
+
+  /* ---------- 3. Colours: light mode ---------- */
+  --bg: #f6f5f1;          /* page background */
+  --surface: #ffffff;     /* cards, panels */
+  --text: #1c1f22;        /* main text */
+  --muted: #5c6369;       /* secondary text */
+  --line: #d9d7d0;        /* borders, dividers */
+  --accent: #1f5fae;      /* links, buttons, tags, highlights */
+  --on-accent: #ffffff;   /* text sitting on an accent background (buttons, badges) */
+  --grid: rgba(31, 95, 174, 0.06);  /* background grid lines */
+}
+
+/* ---------- 4. Colours: dark mode ----------
+   Used automatically when the visitor's device is in dark mode.
+   To lock the site to one mode, add data-theme="light" or data-theme="dark"
+   to the <html> tag of each page. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171a;
+    --surface: #1c2024;
+    --text: #e7e9ea;
+    --muted: #9aa2a8;
+    --line: #2d3338;
+    --accent: #6ea8ff;
+    --on-accent: #14171a;
+    --grid: rgba(110, 168, 255, 0.05);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171a;
+  --surface: #1c2024;
+  --text: #e7e9ea;
+  --muted: #9aa2a8;
+  --line: #2d3338;
+  --accent: #6ea8ff;
+  --on-accent: #14171a;
+  --grid: rgba(110, 168, 255, 0.05);
+}
