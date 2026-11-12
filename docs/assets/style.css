@@ -138,3 +138,22 @@ h2 { font-size: 26px; font-weight: 600; margin: 0 0 20px; }
   .about-grid { grid-template-columns: 1fr; gap: 24px; }
   nav a { margin-left: 14px; }
 }
+
+/* Markdown write-ups (project.html) */
+.project .lede { font-size: 18px; margin-bottom: 24px; }
+.project .crumbs { margin-bottom: 28px; }
+.project .meta { margin-bottom: 8px; }
+.hero-img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); margin: 24px 0 8px; display: block; }
+.prose { margin-top: 8px; }
+.prose img { max-width: 100%; height: auto; border-radius: var(--radius); }
+.prose h2 { font-size: 21px; margin-top: 36px; margin-bottom: 8px; }
+.prose h3 { font-size: 18px; margin-top: 28px; margin-bottom: 6px; }
+.prose code { font-family: var(--font-mono); font-size: .9em; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 1px 5px; }
+.prose pre { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; overflow-x: auto; }
+.prose pre code { border: 0; padding: 0; background: none; }
+.prose blockquote { margin: 16px 0; padding-left: 16px; border-left: 3px solid var(--accent); color: var(--muted); }
+.prose table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; font-size: 15px; }
+.prose th, .prose td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; }
+.prose th { background: var(--surface); }
+.project > .grid { margin-top: 12px; }
+.error { color: var(--accent); }

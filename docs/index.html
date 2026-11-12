@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <!-- Projects are listed in assets/projects.js (supports nested sub-projects). -->
+      <!-- Projects come from the Markdown files in content/projects (folders = nested projects). -->
       <nav class="crumbs" id="work-crumbs" aria-label="Project folders" hidden></nav>
       <div class="folder-intro" id="work-intro" hidden></div>
       <div class="grid" id="work-grid" aria-live="polite"></div>
@@ -88,7 +88,7 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="assets/projects.js"></script>
+  <script src="assets/content.js"></script>
   <script src="assets/work.js"></script>
 </body>
 </html>
