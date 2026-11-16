@@ -153,7 +153,7 @@ function Get-ProjectNodes([string]$dir, [string]$parentPath) {
 if (-not (Test-Path -LiteralPath $ProjectsDir)) { throw "Projects folder not found: $ProjectsDir" }
 
 $projects = Get-ProjectNodes $ProjectsDir ''
-$out = [ordered]@{ generated = (Get-Date).ToString('s'); projects = $projects }
+$out = [ordered]@{ projects = $projects }   # no timestamp, so the file only changes when the content does
 $json = ConvertTo-Json -InputObject $out -Depth 64
 [IO.File]::WriteAllText($OutFile, $json, (New-Object System.Text.UTF8Encoding $false))
 

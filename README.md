@@ -21,7 +21,7 @@ netDesk/
 │   │   │       └── cycloidal-drive/
 │   │   │           ├── index.md
 │   │   │           └── rev-a.md
-│   │   └── index.json             ← generated from projects/ (not committed)
+│   │   └── index.json             ← generated from projects/ (committed, so the site works without the build)
 │   └── assets/
 │       ├── theme.css              ← colours, fonts, corner radius, grid background
 │       ├── style.css              ← layout and components

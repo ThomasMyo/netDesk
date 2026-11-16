@@ -1,0 +1,170 @@
+{
+    "projects":  [
+                     {
+                         "id":  "cummins",
+                         "path":  "cummins",
+                         "title":  "Cummins Valvetrain",
+                         "category":  "design",
+                         "year":  2026,
+                         "summary":  "Product engineering internship focused on solenoid testing, automated test rigs and customer-facing results.",
+                         "role":  "Product Engineer Intern (May – Sep 2026)",
+                         "outcome":  "Automated test procedure cut solenoid testing time by 40%",
+                         "order":  1,
+                         "file":  "content/projects/Cummins/index.md",
+                         "hasBody":  true,
+                         "children":  [
+                                          {
+                                              "id":  "dataq-automated-test-stand",
+                                              "path":  "cummins/dataq-automated-test-stand",
+                                              "title":  "Automatic Data recorder",
+                                              "category":  "code",
+                                              "year":  2026,
+                                              "summary":  "Perform Comprehensive Data Sweep",
+                                              "outcome":  "Time from testing to presentation was cut down by half",
+                                              "order":  1000,
+                                              "file":  "content/projects/Cummins/DATAQ automated test stand.md",
+                                              "hasBody":  true
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "fsae",
+                         "path":  "fsae",
+                         "title":  "Minuteman Racing (UMass Formula SAE)",
+                         "category":  "design",
+                         "year":  "2023 – 2026",
+                         "summary":  "Three seasons on the team\u0027s first car, from designing the chassis to co-leading the 60-student club as Chief Engineer.",
+                         "image":  "images/fsae-design-review.jpg",
+                         "role":  "Chassis Engineer → Chassis Lead → Chief Engineer",
+                         "tools":  [
+                                       "SolidWorks",
+                                       "ANSYS"
+                                   ],
+                         "order":  2,
+                         "file":  "content/projects/FSAE/index.md",
+                         "hasBody":  true,
+                         "children":  [
+                                          {
+                                              "id":  "chassis",
+                                              "path":  "fsae/chassis",
+                                              "title":  "Chassis",
+                                              "category":  "design",
+                                              "year":  "2023 – 2025",
+                                              "summary":  "The team\u0027s first chassis, designed around driver ergonomics and suspension, with an 18% lower ride height.",
+                                              "image":  "images/fsae-chassis-drawing.jpg",
+                                              "role":  "Chassis Engineer, then Chassis Lead",
+                                              "tools":  [
+                                                            "SolidWorks",
+                                                            "ANSYS"
+                                                        ],
+                                              "outcome":  "18% lower ride height and more fuel capacity, with no loss of driver-size compatibility",
+                                              "order":  1,
+                                              "file":  "content/projects/FSAE/Chassis.md",
+                                              "hasBody":  true
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "asme-drone",
+                         "path":  "asme-drone",
+                         "title":  "Competition drone (UMass ASME Design Team)",
+                         "category":  "design",
+                         "year":  "2023 – 2024",
+                         "summary":  "A laser-cut test bed and a modular 3D-printed body for the ASME student design competition.",
+                         "image":  "images/drone-frame.jpg",
+                         "role":  "Drone Engineer",
+                         "tools":  [
+                                       "Laser cutting",
+                                       "3D printing"
+                                   ],
+                         "outcome":  "1st place for design documentation; 20% shorter print times",
+                         "order":  3,
+                         "file":  "content/projects/ASME Drone.md",
+                         "hasBody":  true
+                     },
+                     {
+                         "id":  "pcb-display-mount",
+                         "path":  "pcb-display-mount",
+                         "title":  "PCB display mount",
+                         "category":  "design",
+                         "year":  2025,
+                         "summary":  "Class project designing a CNC-machined standoff mount that suits automatic assembly.",
+                         "image":  "images/pcb-mount-exploded.jpg",
+                         "role":  "Group lead, CNC component (MIE 375 Manufacturing Processes)",
+                         "tools":  [
+                                       "CNC mill"
+                                   ],
+                         "order":  4,
+                         "file":  "content/projects/PCB Display Mount.md",
+                         "hasBody":  true
+                     },
+                     {
+                         "id":  "keyboards",
+                         "path":  "keyboards",
+                         "title":  "Bespoke keyboard design",
+                         "category":  "personal",
+                         "year":  "2023 – present",
+                         "summary":  "Custom keyboards designed around each client\u0027s needs, prototyped with CNC machining and 3D printing.",
+                         "image":  "images/Mimi50.png",
+                         "role":  "Designer and maker",
+                         "tools":  [
+                                       "SolidWorks",
+                                       "Blender",
+                                       "CNC",
+                                       "3D printing"
+                                   ],
+                         "order":  5,
+                         "file":  "content/projects/Keyboards/index.md",
+                         "hasBody":  true,
+                         "children":  [
+                                          {
+                                              "id":  "aline",
+                                              "path":  "keyboards/aline",
+                                              "title":  "Aline",
+                                              "category":  "personal",
+                                              "summary":  "Custom keyboard design.",
+                                              "image":  "images/Aline.png",
+                                              "order":  1,
+                                              "file":  "content/projects/Keyboards/Aline.md",
+                                              "hasBody":  true
+                                          },
+                                          {
+                                              "id":  "mimi50",
+                                              "path":  "keyboards/mimi50",
+                                              "title":  "Mimi50",
+                                              "category":  "personal",
+                                              "summary":  "A 14U HHKB-style 50% that keeps the symmetry of a full-size Tsangan HHKB board.",
+                                              "image":  "images/Mimi50.png",
+                                              "order":  2,
+                                              "file":  "content/projects/Keyboards/Mimi50.md",
+                                              "hasBody":  true
+                                          },
+                                          {
+                                              "id":  "road-trip",
+                                              "path":  "keyboards/road-trip",
+                                              "title":  "Road Trip",
+                                              "category":  "personal",
+                                              "summary":  "Custom keyboard design.",
+                                              "image":  "images/Road%20Trip.png",
+                                              "order":  3,
+                                              "file":  "content/projects/Keyboards/Road Trip.md",
+                                              "hasBody":  true
+                                          }
+                                      ]
+                     },
+                     {
+                         "id":  "313-beam-data",
+                         "path":  "313-beam-data",
+                         "title":  "Beam design visualizer",
+                         "category":  "code",
+                         "year":  2025,
+                         "summary":  "Visualize and optimize weight for a given torque",
+                         "tools":  [
+                                       "Matlab"
+                                   ],
+                         "order":  1000,
+                         "file":  "content/projects/313 Beam Data.md",
+                         "hasBody":  true
+                     }
+                 ]
+}
