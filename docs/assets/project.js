@@ -99,18 +99,21 @@
     main.appendChild(grid);
   }
 
-  // Images and links in Markdown are written relative to the .md file. Point them at the
-  // right place, and turn links to other project .md files into links to their pages.
+  // Images and links in Markdown point at the right file:
+  //   /images/x.jpg → from the site folder (docs/), works from any .md file at any depth
+  //   x.jpg         → next to the .md file
+  // Links to other project .md files become links to their pages.
   function fixLinks(container, mdFile) {
     const byFile = {};
     P.walk(projects, n => { if (n.file) byFile[n.file] = n; });
-    const base = new URL(mdFile, location.href);
     const siteRoot = new URL('.', location.href).href;
-    const isRelative = v => v && !/^([a-z][a-z0-9+.-]*:|\/|#)/i.test(v);
+    const base = new URL(mdFile, location.href);
+    const isRelative = v => v && !/^([a-z][a-z0-9+.-]*:|\/\/|#)/i.test(v);
+    const resolve = v => v.startsWith('/') ? new URL(v.replace(/^\/+/, ''), siteRoot) : new URL(v, base);
 
     container.querySelectorAll('img[src]').forEach(img => {
       const src = img.getAttribute('src');
-      if (isRelative(src)) img.src = new URL(src, base).href;
+      if (isRelative(src)) img.src = resolve(src).href;
     });
     container.querySelectorAll('a[href]').forEach(a => {
       const href = a.getAttribute('href');
@@ -118,7 +121,7 @@
         if (/^https?:/.test(href)) { a.target = '_blank'; a.rel = 'noopener'; }
         return;
       }
-      const abs = new URL(href, base);
+      const abs = resolve(href);
       const rel = decodeURIComponent(abs.href.replace(siteRoot, '').split('#')[0]);
       const target = byFile[rel];
       a.href = target ? P.pageHref(target) : abs.href;

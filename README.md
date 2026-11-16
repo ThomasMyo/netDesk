@@ -10,6 +10,7 @@ netDesk/
 ├── docs/                          ← THE WEBSITE (published to GitHub Pages)
 │   ├── index.html                 ← home page: intro, Work grid, About, Contact
 │   ├── project.html               ← one page that shows any project's write-up
+│   ├── images/                    ← ★ YOUR PHOTOS (referenced as /images/name.jpg)
 │   ├── content/
 │   │   ├── projects/              ← ★ YOUR PROJECTS, one Markdown file each
 │   │   │   ├── _template.md       ← copy this to start a project (lists every tag)
@@ -27,7 +28,7 @@ netDesk/
 │       ├── content.js             ← loads index.json, draws project cards
 │       ├── work.js                ← Work grid: folders, breadcrumbs, filters
 │       ├── project.js             ← renders a project's Markdown write-up
-│       └── img/                   ← shared images (cv.pdf goes in assets/)
+│       └── (cv.pdf goes here)
 ├── scripts/
 │   ├── build-index.ps1            ← scans content/projects → content/index.json
 │   └── serve.ps1                  ← local preview server (rebuilds the index live)
@@ -45,7 +46,7 @@ netDesk/
    category: personal        # design | personal | code  (filter buttons)
    year: 2025
    summary: One or two lines for the card.
-   image: bike-frame.jpg     # optional, relative to this .md file
+   image: /images/bike-frame.jpg   # optional, from docs/images/
    link: https://…           # optional external link
    role: Designer            # optional, shown on the write-up page
    tools: [Fusion 360, TIG]  # optional
@@ -59,7 +60,7 @@ netDesk/
 
 **Nested projects:** make a folder rather than a file. The folder's `index.md` holds that project's own tags and write-up, and every other `.md` file or sub-folder inside it becomes a sub-project. You can nest to any depth.
 
-**Images:** keep them next to the Markdown file, or in a sub-folder such as `robot-arm/images/`. Folders that contain no `.md` files are ignored. Reference images relatively (`![Test rig](images/rig.jpg)`).
+**Images:** put them in `docs/images/` and start the path with `/images/`, e.g. `image: /images/bike-frame.jpg` or `![Test rig](/images/rig.jpg)` in the write-up. A leading `/` means "from the site folder", so the same path works from any `.md` file at any depth. Paths without the leading `/` are still relative to the `.md` file. Use lowercase names with dashes: GitHub Pages treats `Photo.JPG` and `photo.jpg` as different files, even though Windows doesn't. For a name with spaces, wrap the write-up path in `< >`: `![Trip](</images/Road Trip.png>)`.
 
 **Linking between projects:** link to the other `.md` file (`[gearbox](../gearbox-housing.md)`). On the site, that becomes a link to the project's page.
 

@@ -15,6 +15,11 @@
 #       index.md
 #       rev-a.md
 #
+# IMAGES: put them in docs/images/ and start the path with /images/ — this works from
+# any file at any depth. Lowercase names with dashes are safest (my-photo.jpg).
+# A name with spaces works in the image: tag; in the write-up wrap it in < >:
+#   ![Road trip](</images/Road Trip.png>)
+#
 # Only title and category are really needed; everything else is optional.
 # ─────────────────────────────────────────────────────────────────────
 title: Project title
@@ -23,7 +28,7 @@ year: 2025
 summary: One or two lines shown on the project card.
 
 # id: custom-id             # override the ID taken from the file/folder name
-# image: cover.jpg          # card + header image; path is relative to this file
+# image: /images/cover.jpg  # card + header image, from docs/images/ (see IMAGES above)
 # link: https://github.com/you/repo   # external link (repo, video, paper…)
 # role: Design engineer
 # tools: [SolidWorks, ANSYS, Python]
@@ -39,6 +44,6 @@ Leave it empty and the card simply won't link to a write-up page.
 
 ## Approach
 
-![Caption](photo.jpg)
+![Caption](/images/photo.jpg)
 
 ## Result

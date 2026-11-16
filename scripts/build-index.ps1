@@ -61,12 +61,16 @@ function Read-Project([string]$file) {
   [pscustomobject]@{ Meta = $meta; HasBody = ($body.Trim().Length -gt 0) }
 }
 
-# Paths in tags (image, link) are relative to the Markdown file; make them relative to docs/.
+# Paths in tags (image, link) become relative to docs/:
+#   /images/x.jpg  → from the site folder (docs/), works from any .md file at any depth
+#   x.jpg          → next to the Markdown file
 function Resolve-ContentPath($value, [string]$baseDirRel) {
   if (-not $value) { return $null }
   $value = "$value"
-  if ($value -match '^([a-z][a-z0-9+.-]*:|/|#)') { return $value }   # absolute URL, mailto:, /path or #anchor
-  $base = [Uri]("http://site/" + $baseDirRel.Trim('/') + '/')
+  if ($value -match '^([a-z][a-z0-9+.-]*:|//|#)') { return $value }   # full URL, mailto: or #anchor
+  if ($value.StartsWith('/')) { $baseDirRel = ''; $value = $value.TrimStart('/') }
+  $dir = $baseDirRel.Trim('/')
+  $base = [Uri]("http://site/" + $(if ($dir) { "$dir/" } else { '' }))
   return ([Uri]::new($base, $value)).AbsolutePath.TrimStart('/')
 }
 
